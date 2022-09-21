@@ -12,7 +12,7 @@ class TAXIWARTESCHLANGE {
     // Methoden
     
     // Vgl. Klassenkarte von TAXIWARTESCHLANGE im Buch S.11
-     // Ergänzen Sie die fehlenden Methoden 
+     // Ergï¿½nzen Sie die fehlenden Methoden 
     
     // 1. Methode anzahlGeben()
     // Bestimmen Sie einen geigneten Ausgabedatentyp, gibt es Eingabeparameter?
@@ -46,9 +46,6 @@ class TAXIWARTESCHLANGE {
         }
         return erstesTaxi;
     }
-    
-   
-    
     public void fahrerlisteAusgeben(){
        String ausgabe="";
        for (int i=0;i<anzahlTaxis;i++){
@@ -56,7 +53,25 @@ class TAXIWARTESCHLANGE {
        }
        System.out.println(ausgabe);
     }
-    
+   public int anzahlGeben(){
+      int anzahlTaxis = 0;
+      for(int i = 0; i < taxistand.length; i++){
+         if(taxistand[i] != null){
+            anzahlTaxis++;
+         }
+        
+      }
+      return anzahlTaxis;
+    }
+    public boolean istLeer(){
+      boolean istLeer = true;
+      for(int i = 0; i < taxistand.length; i++){
+         if(taxistand[i] != null){
+            istLeer = false;
+         }   
+      }
+      return istLeer;
+    }
     
  }
 
